@@ -11,7 +11,11 @@ namespace MVC.Models
 
         [Key]
         public int Id { set; get; }
+        [Required(ErrorMessage = "Name is required!")] 
+        [StringLength(100, ErrorMessage = "Maximal length of the name of a song is 100 characters!")] 
         public string Name { set; get; }
+        [Required(ErrorMessage = "Artist's name is required!")]
+        [StringLength(50, ErrorMessage = "Maximal length of an artist's name is 50 characters!")]
         public string Artist { set; get; }
         public int GenreId { set; get; }
 

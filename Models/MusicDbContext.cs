@@ -10,7 +10,8 @@ namespace MVC.Models
     {
 
         public DbSet<Song> Songs { get; set; }
-    
+
+        public System.Data.Entity.DbSet<MVC.Models.Genre> Genres { get; set; }
     }
 
 }
